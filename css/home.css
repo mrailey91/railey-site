@@ -1,0 +1,334 @@
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: var(--nav-height);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(44,42,41,0.65) 0%, rgba(44,42,41,0.3) 100%);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  color: var(--color-white);
+  font-size: 3.2rem;
+  max-width: 650px;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero p {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-bottom: 32px;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.services-intro {
+  text-align: center;
+  padding: var(--section-padding) 0 40px;
+}
+
+.services-intro .text-accent {
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.services-intro h2 {
+  margin-bottom: 16px;
+}
+
+.services-intro h2 .text-primary {
+  display: block;
+}
+
+.services-intro .divider {
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary);
+  margin: 16px auto 20px;
+}
+
+.services-intro p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--color-text-light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 0 0 var(--section-padding);
+}
+
+.service-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 220px;
+  cursor: pointer;
+}
+
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.05);
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 60%);
+}
+
+.service-card h3 {
+  position: absolute;
+  bottom: 16px;
+  left: 20px;
+  right: 20px;
+  color: var(--color-white);
+  font-size: 1.3rem;
+  z-index: 1;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.service-card a {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.detail-section {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: var(--section-padding) 0;
+}
+
+.detail-section--reverse {
+  flex-direction: row-reverse;
+}
+
+.detail-section .detail-content {
+  flex: 1;
+}
+
+.detail-section .detail-image {
+  flex: 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.detail-section .detail-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.detail-content .section-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+
+.detail-content h2 {
+  margin-bottom: 16px;
+}
+
+.detail-content p {
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+.full-width-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: var(--section-padding) 0;
+}
+
+.full-width-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(44,42,41,0.8);
+}
+
+.full-width-section .container {
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+}
+
+.full-width-section h2 {
+  margin-bottom: 16px;
+}
+
+.full-width-section p {
+  max-width: 800px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.9);
+}
+
+.faq-section {
+  background: var(--color-dark);
+  color: var(--color-white);
+  padding: var(--section-padding) 0;
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-white);
+  text-align: left;
+}
+
+.accordion-header:hover {
+  color: var(--color-accent);
+}
+
+.accordion-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.accordion-body-inner {
+  padding: 0 0 20px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.8;
+}
+
+.contact-section {
+  position: relative;
+  display: flex;
+  min-height: 500px;
+}
+
+.contact-form-side {
+  flex: 1;
+  background: var(--color-dark);
+  color: var(--color-white);
+  padding: var(--section-padding) 40px;
+}
+
+.contact-form-side h2 {
+  margin-bottom: 8px;
+}
+
+.contact-form-side > p {
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 24px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-accent);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius);
+  color: var(--color-white);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background: rgba(255,255,255,0.12);
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.contact-image-side {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+  }
+  .hero h1 { font-size: 2.2rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .detail-section,
+  .detail-section--reverse { flex-direction: column; gap: 30px; }
+  .detail-section .detail-image img { height: 280px; }
+  .contact-section { flex-direction: column; }
+  .contact-image-side { min-height: 300px; }
+}

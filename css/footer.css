@@ -1,0 +1,102 @@
+.site-footer {
+  background: var(--color-dark);
+  color: var(--color-white);
+  padding: 50px 0 0;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.footer-brand {
+  flex: 0 0 200px;
+}
+
+.footer-brand img {
+  height: 70px;
+  margin-bottom: 12px;
+}
+
+.footer-brand > img {
+  height: auto;
+  width: 180px;
+  background: var(--color-white);
+  padding: 8px;
+  border-radius: var(--radius);
+}
+
+.footer-brand .copyright {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 8px;
+}
+
+.footer-contact,
+.footer-hours,
+.footer-address {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-contact h3,
+.footer-hours h3,
+.footer-address h3 {
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.footer-contact p,
+.footer-hours p,
+.footer-address p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 4px;
+}
+
+.footer-contact a:hover {
+  color: var(--color-accent);
+}
+
+.footer-map {
+  flex: 1;
+  min-width: 250px;
+  min-height: 200px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 16px 0;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-tagline {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  padding: 16px 0;
+  background: rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer-brand { flex: 1 1 100%; }
+}

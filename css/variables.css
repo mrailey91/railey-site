@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+:root {
+  --color-primary: #1B4D5C;
+  --color-primary-dark: #133842;
+  --color-accent: #3A8FA0;
+  --color-dark: #1a2e35;
+  --color-dark-lighter: #2d4a52;
+  --color-text: #2d4a52;
+  --color-text-light: #666;
+  --color-bg: #eeeeee;
+  --color-bg-light: #f8f8f8;
+  --color-bg-white: #ffffff;
+  --color-white: #ffffff;
+
+  --font-heading: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+
+  --container-max: 1200px;
+  --container-narrow: 900px;
+  --section-padding: 80px;
+  --section-padding-sm: 50px;
+  --nav-height: 130px;
+  --radius: 4px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.1);
+  --transition: 0.3s ease;
+}

@@ -1,0 +1,133 @@
+.page-hero {
+  margin-top: var(--nav-height);
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(44,42,41,0.7);
+}
+
+.page-hero h1 {
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+  text-align: center;
+  font-size: 2.6rem;
+}
+
+.page-content {
+  padding: var(--section-padding) 0;
+}
+
+.page-content p {
+  line-height: 1.9;
+  color: var(--color-text-light);
+  margin-bottom: 1.2rem;
+}
+
+.page-content h2 {
+  margin-bottom: 16px;
+  color: var(--color-dark);
+}
+
+.page-content h3 {
+  margin-top: 32px;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+.page-content ul {
+  list-style: disc;
+  padding-left: 24px;
+  margin-bottom: 1.2rem;
+}
+
+.page-content ul li {
+  margin-bottom: 6px;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+.page-sidebar {
+  background: var(--color-bg-light);
+  border-radius: var(--radius);
+  padding: 30px;
+  position: sticky;
+  top: calc(var(--nav-height) + 24px);
+}
+
+.page-sidebar h3 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: var(--color-primary);
+}
+
+.page-sidebar ul li {
+  margin-bottom: 8px;
+}
+
+.page-sidebar ul li a {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  display: block;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.page-sidebar ul li a:hover,
+.page-sidebar ul li a.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+  align-items: start;
+}
+
+.page-cta {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 30px;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-top: 40px;
+}
+
+.page-cta h3 {
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+
+.page-cta p {
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 0;
+}
+
+.page-cta p a {
+  color: var(--color-white);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+  .page-sidebar {
+    position: static;
+  }
+  .page-hero { height: 220px; }
+  .page-hero h1 { font-size: 2rem; }
+}
